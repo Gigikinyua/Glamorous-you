@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@color/white"
+    tools:context=".fragment.DashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@color/baby_pink"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi! Jemimah"
+                android:textColor="#C2185B" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Business name"
+                android:textSize="24sp"
+                android:textColor="@color/color_primary_dark"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_gravity="bottom"
+            android:scaleType="fitEnd"
+            android:layout_weight="1"
+            android:src="@drawable/ic_dashboard_ill" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/color_primary_dark" />
+
+        <GridLayout
+            android:id="@+id/gridServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:elevation="10dp">
+
+            <com.jemimah.glamorous_you.ui.ServiceCardComponent
+                android:id="@+id/scOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_small"
+                app:imageSrc="@drawable/ic_calendar"
+                app:title="Card One"
+                android:layout_gravity="fill"
+                android:gravity="center_horizontal"
+                android:layout_columnWeight="1"/>
+
+            <com.jemimah.glamorous_you.ui.ServiceCardComponent
+                android:id="@+id/scTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_small"
+                app:imageSrc="@drawable/ic_calendar"
+                app:title="Card One"
+                android:layout_gravity="fill"
+                android:gravity="center_horizontal"
+                android:layout_columnWeight="1" />
+
+            <com.jemimah.glamorous_you.ui.ServiceCardComponent
+                android:id="@+id/scThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_small"
+                app:imageSrc="@drawable/ic_calendar"
+                app:title="Card One"
+                android:layout_gravity="fill"
+                android:gravity="center_horizontal"
+                android:layout_columnWeight="1" />
+
+            <com.jemimah.glamorous_you.ui.ServiceCardComponent
+                android:id="@+id/scFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_small"
+                app:imageSrc="@drawable/ic_calendar"
+                app:title="Card One"
+                android:layout_gravity="fill"
+                android:gravity="center_horizontal"
+                android:layout_columnWeight="1"/>
+        </GridLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

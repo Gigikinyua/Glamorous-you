@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Glamorous_you</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="appointments">Appointments</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_title">Error</string>
+    <string name="okay">Okay</string>
+    <string name="sweetalert_error_message">Unable to proceed. Please try again…</string>
+    <string name="internet_error">Check your internet connection and try again</string>
+    <string name="my_account">My Account</string>
+</resources>

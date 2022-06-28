@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="actionOverflowMenuStyle">@style/MyOverflowMenu</item>
+        <item name="homeAsUpIndicator">@drawable/ic_chevron_left</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/corisande_regular</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
+        <item name="android:fontFamily">@font/corisande_bold</item>
+    </style>
+
+    <style name="MyOverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+        <item name="android:overlapAnchor">false</item>
+        <item name="android:fontFamily">@font/corisande_regular</item>
+        <item name="android:dropDownVerticalOffset">3.0dip</item>
+    </style>
+
+    <style name="CustomChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">#EFEFEF</item>
+        <item name="chipStrokeColor">@color/bg_chip_state_list</item>
+        <item name="chipStrokeWidth">1.5dp</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
+        <item name="android:textSize">14sp</item>
+        <item name="chipStartPadding">10dp</item>
+        <item name="chipEndPadding">10dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialComponents.Chip_Thin</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialComponents.Chip_Thin" parent="">
+        <item name="cornerSize">15dp</item>
+    </style>
+
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:textColorPrimary">@color/color_primary_dark</item>
+
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/color_primary_dark</item>
+        <item name="android:fontFamily">@font/corisande_regular</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:fontFamily">@font/corisande_regular</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/spinner_background</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>
