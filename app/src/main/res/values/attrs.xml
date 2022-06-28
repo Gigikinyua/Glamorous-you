@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ServiceCardComponent">
+        <attr name="imageSrc" format="reference"/>
+        <attr name="title" format="string"/>
+        <attr name="android:layout_width" />
+        <attr name="android:layout_height"/>
+        <attr name="mWidth" format="dimension"/>
+        <attr name="mHeight" format="dimension"/>
+    </declare-styleable>
+</resources>

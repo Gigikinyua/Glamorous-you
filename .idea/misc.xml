@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/button_background.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/gray_stroked.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/grey_button.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_barber.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_barbershop.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_check_circle.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_chevron_left.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_dashboard.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_email.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_facebook.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_gym.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_home.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_home_ill.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_lock_person.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_minus.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_money.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_person_outline.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_phone.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_pin_drop.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_plus.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_profile.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_right_arrow.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_salon.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_sign_out.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_spa.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_star.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_stars.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_tag.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_tiktok.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/oval.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/pink_rounded.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/spinner_background.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/stroked_button_background.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/stroked_rounded_edt.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_book_service.xml" value="0.22" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_business_details.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_category.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_login.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_main.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_my_account.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_register.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_register_business.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_service_provider.xml" value="0.11851092896174864" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/child_layout.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/component_service_card.xml" value="0.11168032786885246" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/confirm_appointment_dialog.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_appointment.xml" value="0.11979166666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_business_account.xml" value="0.11509562841530055" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_business_appointment.xml" value="0.22" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_dashboard.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_home.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_my_account.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/header_layout.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_appointments.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_business_history.xml" value="0.11168032786885246" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_business_placeholder.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_businesses.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_categories.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_my_businesses.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_recommended.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_services.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/login_dialog.xml" value="0.11979166666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/number_picker_custom_layout.xml" value="0.11979166666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/service_provicer_dialog.xml" value="0.11851092896174864" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/spinner_layout.xml" value="0.11851092896174864" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/menu/account_menu.xml" value="0.1796875" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/menu/menu.xml" value="0.11979166666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/menu/navigation.xml" value="0.1796875" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/menu/sp_navigation.xml" value="0.11979166666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/xml/network_security_config.xml" value="0.11979166666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
