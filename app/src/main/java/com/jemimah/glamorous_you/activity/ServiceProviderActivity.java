@@ -1,5 +1,6 @@
 package com.jemimah.glamorous_you.activity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -33,7 +34,9 @@ public class ServiceProviderActivity extends AppCompatActivity {
 
         navigation.setOnItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        loadFragment(new DashboardFragment());
+        DashboardFragment dashboardFragment = new DashboardFragment();
+        dashboardFragment.setBusiness(business);
+        loadFragment(dashboardFragment);
     }
 
     private void initViews() {
@@ -52,8 +55,9 @@ public class ServiceProviderActivity extends AppCompatActivity {
             = item -> {
         Fragment fragment;
         if (item.getItemId() == R.id.navigation_dashboard) {
-            fragment = new DashboardFragment();
-            loadFragment(fragment);
+            DashboardFragment dashboardFragment = new DashboardFragment();
+            dashboardFragment.setBusiness(business);
+            loadFragment(dashboardFragment);
             return true;
         } else if (item.getItemId() == R.id.navigation_appointment) {
             BusinessAppointmentFragment businessAppointmentFragment = new BusinessAppointmentFragment();
@@ -76,5 +80,12 @@ public class ServiceProviderActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_container, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(ServiceProviderActivity.this, MainActivity.class));
+        finish();
     }
 }

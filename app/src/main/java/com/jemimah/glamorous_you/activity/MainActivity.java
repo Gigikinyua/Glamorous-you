@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnItemSelectedListener(mOnNavigationItemSelectedListener);
 
         loadFragment(new HomeFragment());
+        setSelectedItem(R.id.navigation_home);
     }
 
     private void initViews() {
@@ -85,5 +86,9 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_container, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    public void setSelectedItem (int id) {
+        navigation.setSelectedItemId(id);
     }
 }

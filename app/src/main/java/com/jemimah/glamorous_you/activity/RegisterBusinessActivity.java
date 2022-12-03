@@ -83,7 +83,7 @@ public class RegisterBusinessActivity extends AppCompatActivity {
             boolean error = false;
 
             if (serviceTypeSpinner.getSelectedItem() != null) {
-                Service service = services.get(subCountySpinner.getSelectedItemPosition());
+                Service service = services.get(serviceTypeSpinner.getSelectedItemPosition());
                 serviceCategory = service.getId();
             }
             if (countySpinner.getSelectedItem() != null) {
@@ -141,12 +141,15 @@ public class RegisterBusinessActivity extends AppCompatActivity {
                     public void onResponse(@NotNull Call<Business> call, @NotNull Response<Business> response) {
                         runOnUiThread(progressDialog::dismissWithAnimation);
                         if (response.isSuccessful()) {
+                            Business business = response.body();
                             runOnUiThread(() -> new SweetAlertDialog(RegisterBusinessActivity.this, SweetAlertDialog.SUCCESS_TYPE)
                                         .setTitleText("Success")
                                         .setContentText("Your new business has been registered successfully.")
                                         .setConfirmButton("Proceed", dialog -> {
                                             dialog.dismissWithAnimation();
-                                            startActivity(new Intent(RegisterBusinessActivity.this, MainActivity.class));
+                                            Intent intent = new Intent(RegisterBusinessActivity.this, ServiceProviderActivity.class);
+                                            intent.putExtra("business", business);
+                                            startActivity(intent);
                                             finish();
                                         })
                                         .show());

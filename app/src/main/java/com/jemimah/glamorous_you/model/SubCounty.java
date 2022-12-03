@@ -30,4 +30,9 @@ public class SubCounty  implements Serializable {
     public void setCounty_code(int county_code) {
         this.county_code = county_code;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

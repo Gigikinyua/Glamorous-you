@@ -37,11 +37,22 @@
                 android:drawableStart="@drawable/ic_phone"
                 android:drawablePadding="5dp" />
 
+            <TextView
+                android:id="@+id/txtClients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCustomerName"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_users"
+                android:drawablePadding="5dp" />
+
             <Button
                 android:id="@+id/btnStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtPhone"
+                android:layout_below="@+id/txtClients"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="7dp"
                 android:layout_marginTop="10dp"
@@ -53,7 +64,7 @@
                 android:id="@+id/btnCancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtPhone"
+                android:layout_below="@+id/txtClients"
                 android:layout_marginTop="10dp"
                 android:layout_toStartOf="@+id/btnStatus"
                 android:background="@drawable/grey_button"

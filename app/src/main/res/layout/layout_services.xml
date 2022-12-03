@@ -6,8 +6,8 @@
     android:layout_marginStart="10dp"
     android:layout_marginBottom="10dp"
     app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="10dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
     app:contentPadding="12dp">
 
     <LinearLayout
@@ -28,8 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Service Name"
-            android:textColor="@color/color_primary_dark"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView

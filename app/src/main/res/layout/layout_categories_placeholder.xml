@@ -4,22 +4,20 @@
     android:layout_width="wrap_content"
     android:padding="13dp"
     android:gravity="center_horizontal"
-    android:id="@+id/category_layout"
     android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/icon"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="@drawable/oval"
+        android:background="#C6C5C5"
         android:padding="5dp"/>
 
     <TextView
         android:id="@+id/txtName"
-        android:layout_width="wrap_content"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:text="Barber"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/color_primary_dark"/>
+        android:background="#C6C5C5"
+        android:layout_marginTop="5dp"/>
 
 </LinearLayout>

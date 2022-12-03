@@ -7,11 +7,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,15 +14,17 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
 import com.jemimah.glamorous_you.R;
-import com.jemimah.glamorous_you.activity.BookServiceActivity;
+import com.jemimah.glamorous_you.activity.LoginActivity;
 import com.jemimah.glamorous_you.activity.MainActivity;
 import com.jemimah.glamorous_you.activity.RegisterActivity;
 import com.jemimah.glamorous_you.activity.RegisterBusinessActivity;
-import com.jemimah.glamorous_you.adapter.HistoryRVAdapter;
 import com.jemimah.glamorous_you.adapter.MyBusinessesAdapter;
-import com.jemimah.glamorous_you.model.Appointment;
 import com.jemimah.glamorous_you.model.Business;
 import com.jemimah.glamorous_you.model.User;
 import com.jemimah.glamorous_you.retrofit.RetrofitApiClient;
@@ -36,7 +33,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import retrofit2.Call;
@@ -48,6 +44,7 @@ public class MyAccountFragment extends Fragment {
 
     private TextView txtLogout, toolbarTitle, txtServiceProvider;
     private User user;
+    private Business business;
 
     private SweetAlertDialog progressDialog;
 
@@ -68,27 +65,41 @@ public class MyAccountFragment extends Fragment {
         if (user == null) {
             toolbarTitle.setText("Glamorous you");
             txtLogout.setText("Login");
+
+            txtLogout.setOnClickListener(v -> getActivity().runOnUiThread(() -> {
+                startActivity(new Intent(getActivity(), LoginActivity.class));
+            }));
+
+            txtServiceProvider.setVisibility(View.GONE);
         } else {
             toolbarTitle.setText(user.getFirstName() + " " + user.getSurname());
             txtLogout.setText("Logout");
-        }
 
-        if (user.getIsServiceProvider().equals("yes")) {
-            txtServiceProvider.setText("Login to your Service Provider Account");
-            txtServiceProvider.setOnClickListener(v -> {
-                progressDialog = new SweetAlertDialog(getActivity(), SweetAlertDialog.PROGRESS_TYPE);
-                progressDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
-                progressDialog.setTitleText("Fetching your businesses");
-                progressDialog.setCancelable(false);
-                progressDialog.show();
+            txtLogout.setOnClickListener(v -> getActivity().runOnUiThread(() -> {
+                SharedPreferences preferences = getActivity().getSharedPreferences("User Data", MODE_PRIVATE);
+                preferences.edit().remove("user").commit();
+                Fragment fragment = new HomeFragment();
+                ((MainActivity) requireActivity()).loadFragment(fragment);
+                ((MainActivity) requireActivity()).setSelectedItem(R.id.navigation_home);
+            }));
 
-                getActivity().runOnUiThread(this::fetchBusinesses);
+            if (user.getIsServiceProvider().equals("yes")) {
+                txtServiceProvider.setText("Login to your Service Provider Account");
+                txtServiceProvider.setOnClickListener(v -> {
+                    progressDialog = new SweetAlertDialog(getActivity(), SweetAlertDialog.PROGRESS_TYPE);
+                    progressDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+                    progressDialog.setTitleText("Fetching your businesses");
+                    progressDialog.setCancelable(false);
+                    progressDialog.show();
 
-            });
-        } else {
-            txtServiceProvider.setText("Open a Service Provider Account");
-            txtServiceProvider.setOnClickListener(v ->
-                    startActivity(new Intent(getActivity(), RegisterActivity.class)));
+                    getActivity().runOnUiThread(this::fetchBusinesses);
+
+                });
+            } else {
+                txtServiceProvider.setText("Open a Service Provider Account");
+                txtServiceProvider.setOnClickListener(v ->
+                        startActivity(new Intent(getActivity(), RegisterActivity.class)));
+            }
         }
 
         return view;
@@ -156,7 +167,7 @@ public class MyAccountFragment extends Fragment {
 
         SharedPreferences pref = getActivity().getSharedPreferences("User Data", MODE_PRIVATE);
         String json = pref.getString("user", "");
-        Gson gson=new Gson();
-        user =gson.fromJson(json, User.class);
+        Gson gson = new Gson();
+        user = gson.fromJson(json, User.class);
     }
 }

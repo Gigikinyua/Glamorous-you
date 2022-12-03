@@ -34,19 +34,21 @@
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_stars.xml" value="0.13055555555555556" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_tag.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_tiktok.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_unavailable.xml" value="0.17168949771689498" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/ic_users.xml" value="0.17407407407407408" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/oval.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/pink_rounded.xml" value="0.13055555555555556" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/spinner_background.xml" value="0.13055555555555556" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/stroked_button_background.xml" value="0.13055555555555556" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/drawable/stroked_rounded_edt.xml" value="0.13055555555555556" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_book_service.xml" value="0.22" />
-        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_business_details.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_business_details.xml" value="0.22" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_category.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_login.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_main.xml" value="0.16032608695652173" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_my_account.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_register.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_register_business.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_register_business.xml" value="0.22" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/activity_service_provider.xml" value="0.11851092896174864" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/child_layout.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/component_service_card.xml" value="0.11168032786885246" />
@@ -54,15 +56,17 @@
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_appointment.xml" value="0.11979166666666667" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_business_account.xml" value="0.11509562841530055" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_business_appointment.xml" value="0.22" />
-        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_dashboard.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_home.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_dashboard.xml" value="0.22" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/fragment_my_account.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/header_layout.xml" value="0.1" />
-        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_appointments.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_appointments.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_business_history.xml" value="0.11168032786885246" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_business_placeholder.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_businesses.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_categories.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_categories_placeholder.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_chip_choice.xml" value="0.15625" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_my_businesses.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_recommended.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/layout/layout_services.xml" value="0.14666666666666667" />
@@ -73,8 +77,10 @@
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/menu/account_menu.xml" value="0.1796875" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/menu/menu.xml" value="0.11979166666666667" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/menu/navigation.xml" value="0.1796875" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/menu/search_menu.xml" value="0.1597222222222222" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/menu/sp_navigation.xml" value="0.11979166666666667" />
         <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/xml/network_security_config.xml" value="0.11979166666666667" />
+        <entry key="..\:/Users/HP/Documents/AndroidStudioProjects/Glamorous_you/app/src/main/res/xml/searchable.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -6,40 +6,86 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:weightSum="10"
-    android:background="@color/white"
+    android:background="#EFEFEF"
     tools:context=".fragment.DashboardFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_height="wrap_content"
         android:background="@color/baby_pink"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
         android:weightSum="3">
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="230dp"
             android:layout_weight="2"
             android:gravity="center_vertical"
             android:orientation="vertical"
             android:padding="10dp">
 
             <TextView
+                android:id="@+id/txtUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hi! Jemimah"
                 android:textColor="#C2185B" />
 
             <TextView
+                android:id="@+id/txtBusinessName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Business name"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:textColor="@color/color_primary_dark"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nairobi"
+                android:layout_marginTop="5dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_facebook" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_tiktok" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_instagram" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_email" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_linkedin" />
+            </LinearLayout>
+
 
         </LinearLayout>
 
@@ -56,70 +102,117 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dashboard"
+            android:text="Services Offered"
             android:textSize="18sp"
             android:layout_marginBottom="10dp"
             android:textColor="@color/color_primary_dark" />
 
-        <GridLayout
-            android:id="@+id/gridServices"
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/servicesChipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipSpacingVertical="4dp"
+            app:chipSpacingHorizontal="4dp"/>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:elevation="10dp">
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp">
 
-            <com.jemimah.glamorous_you.ui.ServiceCardComponent
-                android:id="@+id/scOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_small"
-                app:imageSrc="@drawable/ic_calendar"
-                app:title="Card One"
-                android:layout_gravity="fill"
-                android:gravity="center_horizontal"
-                android:layout_columnWeight="1"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <com.jemimah.glamorous_you.ui.ServiceCardComponent
-                android:id="@+id/scTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_small"
-                app:imageSrc="@drawable/ic_calendar"
-                app:title="Card One"
-                android:layout_gravity="fill"
-                android:gravity="center_horizontal"
-                android:layout_columnWeight="1" />
+                <ImageView
+                    android:id="@+id/icon1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/oval"
+                    android:src="@drawable/ic_check_circle"
+                    android:layout_alignParentStart="true"
+                    android:padding="5dp"/>
 
-            <com.jemimah.glamorous_you.ui.ServiceCardComponent
-                android:id="@+id/scThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_small"
-                app:imageSrc="@drawable/ic_calendar"
-                app:title="Card One"
-                android:layout_gravity="fill"
-                android:gravity="center_horizontal"
-                android:layout_columnWeight="1" />
+                <TextView
+                    android:id="@+id/completedAppointments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_toEndOf="@+id/icon1"
+                    android:gravity="center_vertical"
+                    android:text="2 Completed Appointments"
+                    android:layout_marginStart="10dp"/>
 
-            <com.jemimah.glamorous_you.ui.ServiceCardComponent
-                android:id="@+id/scFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_small"
-                app:imageSrc="@drawable/ic_calendar"
-                app:title="Card One"
-                android:layout_gravity="fill"
-                android:gravity="center_horizontal"
-                android:layout_columnWeight="1"/>
-        </GridLayout>
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_below="@+id/completedAppointments"
+                    android:background="@color/baby_pink" />
+
+                <ImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/view1"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/oval"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_close" />
+
+                <TextView
+                    android:id="@+id/canceledAppointments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_toEndOf="@+id/icon2"
+                    android:layout_below="@+id/view1"
+                    android:gravity="center_vertical"
+                    android:text="3 Canceled Appointments"
+                    android:layout_marginStart="10dp"/>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_below="@+id/canceledAppointments"
+                    android:background="@color/baby_pink" />
+
+                <ImageView
+                    android:id="@+id/icon3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/view2"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/oval"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_stars" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_toEndOf="@+id/icon3"
+                    android:layout_below="@+id/view2"
+                    android:gravity="center_vertical"
+                    android:text="Client Rating: Good"
+                    android:layout_marginStart="10dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
 
     </LinearLayout>
 

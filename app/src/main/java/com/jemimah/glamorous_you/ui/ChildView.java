@@ -1,19 +1,13 @@
 package com.jemimah.glamorous_you.ui;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.jemimah.glamorous_you.R;
-import com.jemimah.glamorous_you.activity.BookServiceActivity;
-import com.jemimah.glamorous_you.activity.MainActivity;
 import com.jemimah.glamorous_you.fragment.BusinessAppointmentFragment;
 import com.jemimah.glamorous_you.model.Appointment;
 import com.jemimah.glamorous_you.retrofit.RetrofitApiClient;
@@ -23,8 +17,6 @@ import com.mindorks.placeholderview.annotations.View;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
-
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,7 +24,7 @@ import retrofit2.Response;
 
 @Layout(R.layout.child_layout)
 public class ChildView {
-    private static String TAG ="ChildView";
+    private static String TAG = "ChildView";
 
     private SweetAlertDialog progressDialog;
 
@@ -41,6 +33,9 @@ public class ChildView {
 
     @View(R.id.txtPhone)
     TextView txtPhone;
+
+    @View(R.id.txtClients)
+    TextView txtClients;
 
     @View(R.id.btnStatus)
     Button btnStatus;
@@ -59,11 +54,12 @@ public class ChildView {
     }
 
     @Resolve
-    private void onResolve(){
+    private void onResolve() {
         txtCustomerName.setText("Name: " + appointment.getBooked_by().getFirstName() + " " + appointment.getBooked_by().getSurname());
         txtPhone.setText(appointment.getBooked_by().getPhone());
+        txtClients.setText(appointment.getNo_of_adults() + " Adults, " + appointment.getNo_of_children() + " Children");
 
-        if(appointment.getStatus().equals("Pending")) {
+        if (appointment.getStatus().equals("Pending")) {
             btnStatus.setText("Accept");
             btnStatus.setOnClickListener(v -> saveStatus("Accepted"));
             btnCancel.setText("Reject");

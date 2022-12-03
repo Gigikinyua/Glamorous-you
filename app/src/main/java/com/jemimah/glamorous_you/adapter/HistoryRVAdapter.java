@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jemimah.glamorous_you.R;
+import com.jemimah.glamorous_you.activity.BookServiceActivity;
 import com.jemimah.glamorous_you.activity.CategoryActivity;
 import com.jemimah.glamorous_you.model.Appointment;
 import com.jemimah.glamorous_you.model.BusinessService;
@@ -49,9 +51,22 @@ public class HistoryRVAdapter extends RecyclerView.Adapter<HistoryRVAdapter.View
         }
         String selectedServiceNames = TextUtils.join(", ", serviceNames);
         holder.txtName.setText(appointment.getBusiness().getName() + " - " + selectedServiceNames);
-        holder.txtLocation.setText(appointment.getBusiness().getCounty().getName());
-        holder.status.setText(appointment.getStatus());
+        String status = appointment.getStatus();
+        holder.status.setText(status);
+        holder.txtClients.setText((appointment.getNo_of_adults() + appointment.getNo_of_children()) + " Clients");
         holder.txtDate.setText("on " + appointment.getAppointment_date() + " " + appointment.getAppointment_time());
+
+        if (status.equals("Completed")) {
+            holder.btnReschedule.setVisibility(View.GONE);
+            holder.btnCancel.setVisibility(View.GONE);
+        } else if (status.equals("Accepted")) {
+            holder.btnReschedule.setVisibility(View.GONE);
+        }
+        holder.btnReschedule.setOnClickListener(v -> {
+            Intent intent = new Intent(context, BookServiceActivity.class);
+            intent.putExtra("appointment", appointment);
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -67,14 +82,17 @@ public class HistoryRVAdapter extends RecyclerView.Adapter<HistoryRVAdapter.View
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private final TextView txtName, txtLocation, status, txtDate;
+        private final TextView txtName, status, txtDate, txtClients;
+        private final Button btnReschedule, btnCancel;
 
         private ViewHolder(View itemView) {
             super(itemView);
             txtName = itemView.findViewById(R.id.txtName);
-            txtLocation = itemView.findViewById(R.id.txtLocation);
             status = itemView.findViewById(R.id.status);
             txtDate = itemView.findViewById(R.id.txtDate);
+            txtClients = itemView.findViewById(R.id.txtClients);
+            btnReschedule = itemView.findViewById(R.id.btnReschedule);
+            btnCancel = itemView.findViewById(R.id.btnCancel);
         }
     }
 }

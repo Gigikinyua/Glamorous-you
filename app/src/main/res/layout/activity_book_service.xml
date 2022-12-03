@@ -1,307 +1,314 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.BookServiceActivity">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/white"
-        android:orientation="vertical">
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:titleTextAppearance="@style/Toolbar.TitleText" />
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/baby_pink" />
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/baby_pink" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:background="@color/white"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:text="Select service"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/serviceSelectError"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/red"
-                android:text="Kindly select service(s)!"/>
-
-            <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
-                android:id="@+id/services_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                app:hintText="Select Service(s)"
-                android:background="@drawable/stroked_rounded_edt"
-                android:padding="5dp"
-                android:layout_marginTop="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="10dp"
-                android:text="No. of Clients:"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/clientCountError"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/red"
-                android:text="Kindly select number of customers!"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal"
-                android:weightSum="1">
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Select service"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/serviceSelectError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Kindly select service(s)!"
+                    android:textColor="@color/red"
+                    android:visibility="gone" />
+
+                <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                    android:id="@+id/services_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/stroked_rounded_edt"
+                    android:padding="3dp"
+                    app:hintText="Select Service(s)" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_weight=".3"
-                    android:text="Adults:" />
+                    android:text="No. of Clients:"
+                    android:textSize="14sp" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <TextView
+                    android:id="@+id/clientCountError"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Kindly select number of customers!"
+                    android:textColor="@color/red"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/imgAdultMinus"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/gray_stroked"
-                        android:padding="5dp"
-                        android:src="@drawable/ic_minus"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <TextView
-                        android:id="@+id/txtAdultCount"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:gravity="center"
-                        android:background="@drawable/gray_stroked"
-                        android:paddingStart="24dp"
-                        android:paddingEnd="24dp"
-                        android:inputType="number"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="20dp"
-                        app:layout_constraintBottom_toBottomOf="@id/imgAdultMinus"
-                        app:layout_constraintStart_toEndOf="@+id/imgAdultMinus"
-                        app:layout_constraintTop_toTopOf="@+id/imgAdultMinus" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight=".3"
+                        android:text="Adults:" />
 
-                    <ImageView
-                        android:id="@+id/imgAdultPlus"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/gray_stroked"
-                        android:padding="5dp"
-                        android:src="@drawable/ic_plus"
-                        app:layout_constraintStart_toEndOf="@+id/txtAdultCount"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight=".3"
-                    android:text="Children:" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:id="@+id/imgChildrenMinus"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/gray_stroked"
-                        android:padding="5dp"
-                        android:src="@drawable/ic_minus"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imgAdultMinus"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/gray_stroked"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_minus"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtAdultCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@drawable/gray_stroked"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:paddingStart="24dp"
+                            android:paddingEnd="24dp"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="20dp"
+                            app:layout_constraintBottom_toBottomOf="@id/imgAdultMinus"
+                            app:layout_constraintStart_toEndOf="@+id/imgAdultMinus"
+                            app:layout_constraintTop_toTopOf="@+id/imgAdultMinus" />
+
+                        <ImageView
+                            android:id="@+id/imgAdultPlus"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/gray_stroked"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_plus"
+                            app:layout_constraintStart_toEndOf="@+id/txtAdultCount"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <TextView
-                        android:id="@+id/txtChildrenCount"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:gravity="center"
-                        android:background="@drawable/gray_stroked"
-                        android:paddingStart="24dp"
-                        android:paddingEnd="24dp"
-                        android:inputType="number"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="20dp"
-                        app:layout_constraintBottom_toBottomOf="@id/imgChildrenMinus"
-                        app:layout_constraintStart_toEndOf="@+id/imgChildrenMinus"
-                        app:layout_constraintTop_toTopOf="@+id/imgChildrenMinus" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight=".3"
+                        android:text="Children:" />
 
-                    <ImageView
-                        android:id="@+id/imgChildrenPlus"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/gray_stroked"
-                        android:padding="5dp"
-                        android:src="@drawable/ic_plus"
-                        app:layout_constraintStart_toEndOf="@+id/txtChildrenCount"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </LinearLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Date &amp; Time"
-                android:textSize="16sp" />
+                        <ImageView
+                            android:id="@+id/imgChildrenMinus"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/gray_stroked"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_minus"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-            <CalendarView
-                android:id="@+id/calendarView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:dateTextAppearance="@style/CalenderViewDateCustomText"
-                android:theme="@style/CalenderViewCustom"
-                android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
+                        <TextView
+                            android:id="@+id/txtChildrenCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@drawable/gray_stroked"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:paddingStart="24dp"
+                            android:paddingEnd="24dp"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="20dp"
+                            app:layout_constraintBottom_toBottomOf="@id/imgChildrenMinus"
+                            app:layout_constraintStart_toEndOf="@+id/imgChildrenMinus"
+                            app:layout_constraintTop_toTopOf="@+id/imgChildrenMinus" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:weightSum="1">
+                        <ImageView
+                            android:id="@+id/imgChildrenPlus"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/gray_stroked"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_plus"
+                            app:layout_constraintStart_toEndOf="@+id/txtChildrenCount"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight=".3"
-                    android:text="Time:"
+                    android:layout_marginTop="10dp"
+                    android:text="Date &amp; Time"
                     android:textSize="16sp" />
 
-                <TimePicker
-                    android:id="@+id/timePicker"
-                    android:layout_width="wrap_content"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="-30dp"
-                    android:layout_marginBottom="-30dp"
-                    android:scaleX="0.80"
-                    android:scaleY="0.80"
-                    android:timePickerMode="spinner" />
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                    android:theme="@style/CalenderViewCustom"
+                    android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight=".3"
+                        android:text="Time:"
+                        android:textSize="16sp" />
+
+                    <TimePicker
+                        android:id="@+id/timePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="-30dp"
+                        android:layout_marginBottom="-30dp"
+                        android:scaleX="0.80"
+                        android:scaleY="0.80"
+                        android:timePickerMode="spinner" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Form of Payment"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/paymentChipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:checkedChip="@+id/chipCash"
+                    app:chipSpacingHorizontal="7dp"
+                    app:selectionRequired="true"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipCash"
+                        style="@style/CustomChipChoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:checkable="true"
+                        android:text="Cash"
+                        android:textAlignment="center"
+                        app:checkedIconVisible="true"
+                        app:chipEndPadding="10dp"
+                        app:chipIcon="@drawable/ic_money"
+                        app:chipStartPadding="10dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipmpesa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:checkable="false"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:text="M-Pesa"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        app:chipBackgroundColor="#C4C4C4"
+                        app:chipCornerRadius="15dp"
+                        app:chipEndPadding="10dp"
+                        app:chipIcon="@drawable/ic_baseline_lock_24"
+                        app:chipIconTint="@color/white"
+                        app:chipStartPadding="10dp" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <Button
+                    android:id="@+id/btnBookAppointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_background"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Book Appointment"
+                    android:textColor="@color/white" />
             </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Form of Payment"
-                android:textSize="16sp" />
-
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/paymentChipGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:checkedChip="@+id/chipCash"
-                app:chipSpacingHorizontal="7dp"
-                app:selectionRequired="true"
-                app:singleLine="true"
-                app:singleSelection="true">
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipCash"
-                    style="@style/CustomChipChoice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="55dp"
-                    android:checkable="true"
-                    android:text="Cash"
-                    android:textAlignment="center"
-                    app:checkedIconVisible="true"
-                    app:chipEndPadding="10dp"
-                    app:chipIcon="@drawable/ic_money"
-                    app:chipStartPadding="10dp" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipmpesa"
-                    android:layout_width="wrap_content"
-                    android:layout_height="55dp"
-                    android:checkable="false"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:text="M-Pesa"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:theme="@style/Theme.MaterialComponents.Light"
-                    app:chipBackgroundColor="#C4C4C4"
-                    app:chipCornerRadius="15dp"
-                    app:chipEndPadding="10dp"
-                    app:chipIcon="@drawable/ic_baseline_lock_24"
-                    app:chipIconTint="@color/white"
-                    app:chipStartPadding="10dp" />
-
-            </com.google.android.material.chip.ChipGroup>
-
-            <Button
-                android:id="@+id/btnBookAppointment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/button_background"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="Book Appointment"
-                android:textColor="@color/white" />
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+
+    </ScrollView>
+</LinearLayout>

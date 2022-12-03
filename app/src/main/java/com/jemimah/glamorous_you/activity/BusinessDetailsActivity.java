@@ -54,9 +54,6 @@ public class BusinessDetailsActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(activeBusiness.getName());
 
-        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_profile);
-        toolbar.setOverflowIcon(drawable);
-
         txtLocation.setText("Location: " + activeBusiness.getCounty().getName());
 
         businessServices = activeBusiness.getBusinessServices();
@@ -101,41 +98,6 @@ public class BusinessDetailsActivity extends AppCompatActivity {
         String json = pref.getString("user", "");
         Gson gson = new Gson();
         user = gson.fromJson(json, User.class);
-    }
-
-    @SuppressLint("RestrictedApi")
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.account_menu, menu);
-        if (menu instanceof MenuBuilder) {  //To display icon on overflow menu
-
-            MenuBuilder m = (MenuBuilder) menu;
-            m.setOptionalIconsVisible(true);
-
-        }
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        /*if (id == R.id.action_changepassword) {
-            Intent intent=new Intent(getApplicationContext(),ChangePassword.class);
-            startActivity(intent);
-            return true;
-        }else if(id==R.id.action_logout){
-            finish();
-        }
-        return true;
-    }*/
-
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

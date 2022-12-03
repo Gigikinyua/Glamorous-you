@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.jemimah.glamorous_you.R;
 import com.jemimah.glamorous_you.adapter.CategoriesRVAdapter;
 import com.jemimah.glamorous_you.model.Service;
@@ -31,6 +32,8 @@ public class HomeFragment extends Fragment {
 
     private RecyclerView rvCategories;
 
+    private ShimmerFrameLayout catShimmerViewContainer;
+
 
     public HomeFragment() {
         // Required empty public constructor
@@ -51,6 +54,7 @@ public class HomeFragment extends Fragment {
 
     private void initView(View view) {
         rvCategories = view.findViewById(R.id.rvCategories);
+        catShimmerViewContainer = view.findViewById(R.id.cat_shimmer_view_container);
     }
 
     private void getServices() {
@@ -68,6 +72,10 @@ public class HomeFragment extends Fragment {
                             CategoriesRVAdapter categoriesRVAdapter = new CategoriesRVAdapter(getContext());
                             rvCategories.setAdapter(categoriesRVAdapter);
                             categoriesRVAdapter.setServicesList(services);
+
+                            // stop animating Shimmer and hide the layout
+                            catShimmerViewContainer.stopShimmerAnimation();
+                            catShimmerViewContainer.setVisibility(View.GONE);
                         } else {
                             getActivity().runOnUiThread(() -> new SweetAlertDialog(getContext(), SweetAlertDialog.ERROR_TYPE)
                                     .setTitleText(getResources().getString(R.string.error_title))
@@ -87,5 +95,17 @@ public class HomeFragment extends Fragment {
                                 .show());
                     }
                 });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        catShimmerViewContainer.startShimmerAnimation();
+    }
+
+    @Override
+    public void onPause() {
+        catShimmerViewContainer.stopShimmerAnimation();
+        super.onPause();
     }
 }

@@ -68,6 +68,7 @@ public class BookServiceActivity extends AppCompatActivity {
     int selectedService;
 
     private User user;
+    private Appointment appointment;
 
     private SweetAlertDialog progressDialog;
 
@@ -214,6 +215,10 @@ public class BookServiceActivity extends AppCompatActivity {
 
         //get extras
         activeBusiness = (Business) getIntent().getExtras().getSerializable("business");
+        appointment = (Appointment) getIntent().getExtras().getSerializable("appointment");
+        if (activeBusiness == null) {
+            activeBusiness = appointment.getBusiness();
+        }
 
         SharedPreferences pref = BookServiceActivity.this.getSharedPreferences("User Data", MODE_PRIVATE);
         String json = pref.getString("user", "");

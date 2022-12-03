@@ -84,4 +84,9 @@ public class County implements Serializable {
     public void setSubcounties(SubCounty[] subcounties) {
         this.subcounties = subcounties;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

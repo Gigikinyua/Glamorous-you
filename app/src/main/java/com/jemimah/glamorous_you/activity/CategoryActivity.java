@@ -1,19 +1,14 @@
 package com.jemimah.glamorous_you.activity;
 
-import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
@@ -39,11 +34,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CategoryActivity extends AppCompatActivity {
+public class CategoryActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
     private static final String TAG = "CategoryActivity";
+    private static final Boolean HIDE_MENU = false;
 
     private Toolbar toolbar;
-    private SearchView searchView;
+    private Boolean mState = true;
+    //    private SearchView searchView;
     private LinearLayout noItemsLayout;
     private RecyclerView rvBusinesses;
     private BusinessesRVAdapter businessesRVAdapter;
@@ -61,25 +58,10 @@ public class CategoryActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
-        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_profile);
-        toolbar.setOverflowIcon(drawable);
+        getSupportActionBar().setTitle(activeService.getName() + "s");
 
         runOnUiThread(this::getBusinesses);
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                businessesRVAdapter.getFilter().filter(newText);
-                return false;
-            }
-        });
     }
 
     private void initViews() {
@@ -87,17 +69,6 @@ public class CategoryActivity extends AppCompatActivity {
         mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
         noItemsLayout = findViewById(R.id.noItemsLayout);
 
-        //set up searchview
-        searchView = findViewById(R.id.searchView);
-        searchView.setQueryHint("search for something");
-        EditText searchTextView = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
-        searchTextView.setBackground(
-                ResourcesCompat.getDrawable(getResources(), R.drawable.pink_rounded, getTheme()));
-        searchTextView.setTextColor(Color.DKGRAY);
-        searchTextView.setHint("Search...");
-        searchTextView.setHintTextColor(Color.LTGRAY);
-        View searchFrame = searchView.findViewById(androidx.appcompat.R.id.search_edit_frame);
-        searchFrame.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.pink_rounded, getTheme()));
         rvBusinesses = findViewById(R.id.rvBusinesses);
 
         //get extras
@@ -123,12 +94,13 @@ public class CategoryActivity extends AppCompatActivity {
 
                                 noItemsLayout.setVisibility(View.VISIBLE);
                                 rvBusinesses.setVisibility(View.GONE);
-                                searchView.setVisibility(View.GONE);
-                                searchView.setEnabled(false);
+
+                                mState = HIDE_MENU; // setting state
+                                invalidateOptionsMenu(); // now onCreateOptionsMenu(...) is called again
+
                             } else {
                                 noItemsLayout.setVisibility(View.GONE);
                                 rvBusinesses.setVisibility(View.VISIBLE);
-                                searchView.setEnabled(true);
 
                                 rvBusinesses.setLayoutManager(new LinearLayoutManager(CategoryActivity.this));
                                 rvBusinesses.setHasFixedSize(true);
@@ -160,6 +132,54 @@ public class CategoryActivity extends AppCompatActivity {
                                 .show());
                     }
                 });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.search_menu, menu);
+
+        MenuItem searchItem = menu.findItem(R.id.search);
+
+        SearchView searchView = (SearchView) searchItem.getActionView();
+        searchView.setQueryHint("Search Business");
+        searchView.setOnQueryTextListener(this);
+        searchView.setIconified(false);
+        searchView.setBackground(ResourcesCompat.getDrawable(getResources(),
+                R.drawable.pink_rounded, getTheme()));
+
+        if (mState == HIDE_MENU) {
+            for (int i = 0; i < menu.size(); i++)
+                menu.getItem(i).setVisible(false);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.search) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    //******************************************************************************
+    //               Search View Query Listener
+    //*****************************************************************************
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        businessesRVAdapter.getFilter().filter(newText);
+        return false;
     }
 
     @Override
